@@ -28,14 +28,14 @@ def find_version(*file_paths):
 
 
 setup(
-    name="netmiko",
+    name="netmiko-bsh",
     version=find_version("netmiko", "__init__.py"),
     description="Multi-vendor library to simplify Paramiko SSH connections to network devices",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ktbyers/netmiko",
-    author="Kirk Byers",
-    author_email="ktbyers@twb-tech.com",
+    url="https://github.com/bsh-developers/netmiko-bsh",
+    author="Kirk Byers, BSH",
+    author_email="ktbyers@twb-tech.com, opensource@bsh.ru",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
@@ -43,6 +43,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9"
     ],
     packages=find_packages(exclude=("test*",)),
     install_requires=[
@@ -50,7 +51,7 @@ setup(
         "paramiko>=2.6.0",
         "scp>=0.13.2",
         "tenacity",
-        "ntc-templates",
+        "ntc-templates-bsh",
         "pyserial",
         "importlib_resources ; python_version<'3.7'",
     ],
